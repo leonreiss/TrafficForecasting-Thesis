@@ -26,3 +26,5 @@ Pedal Me in London.
 
 **Algorithms are based on the following Paper:** Seo, Y., Defferrard, M., Vandergheynst, P., & Bresson, X. (2016). Structured Sequence Modeling
 with Graph Convolutional Recurrent Networks. arXiv (Cornell University). https://doi.org/10.48550/arxiv.1612.07659
+
+**Pytorch Library:** Pytorch Geometric Temporal (https://github.com/benedekrozemberczki/pytorch_geometric_temporal/blob/master/docs/source/modules/root.rst)

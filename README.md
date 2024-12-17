@@ -20,6 +20,9 @@ by the GCRN models, ARIMA is currently the better choice despite similar perform
 could serve as a decision support system for resource optimization in the respective regions of
 Pedal Me in London.
 
-This repository consists of 2 Files:
+**This repository consists of 2 Files:**
  1. "Code_TrafficForecastingGCRN.py" contains the python code with all machine learning algorithms
  2. "Written_Thesis_TrafficForecasting_Leon_Reiß.pdf" contains the written thesis submitted at Maastricht University (no publication restrictions)
+
+**Algorithms are based on the following Paper:** Seo, Y., Defferrard, M., Vandergheynst, P., & Bresson, X. (2016). Structured Sequence Modeling
+with Graph Convolutional Recurrent Networks. arXiv (Cornell University). https://doi.org/10.48550/arxiv.1612.07659

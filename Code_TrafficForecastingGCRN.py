@@ -48,7 +48,8 @@ from tqdm import tqdm
 from torch_geometric_temporal.dataset import PedalMeDatasetLoader
 from torch_geometric_temporal.signal import temporal_signal_split
 import json
-import urllib.request from torch_geometric_temporal.signal import StaticGraphTemporalSignal
+import urllib.request
+from torch_geometric_temporal.signal import StaticGraphTemporalSignal
 import matplotlib.pyplot as plt
 import matplotlib.ticker as ticker
 import time
@@ -97,7 +98,6 @@ def correct_dataset_outliers(dataset):
 # plot style attributes
 linestyles = ['-', '--', ':', '-.']
 greyscales = ['#808080', '#A9A9A9', '#C0C0C0', '#D3D3D3']
-number_of_stations = len(dataset.features[0])
 
 def plot_station_data(dataset, station_index, linestyles, greyscales):
     station_features = np.array([features[station_index] for features in dataset.features])
@@ -472,7 +472,7 @@ print(f"Overall GConvLSTM - Test MSE: {overall_test_mse}, Test RMSE: {overall_te
 selected_stations = [0, 2, 14]
 num_historical_data = 10
 
-# Sicherstellen, dass die Vorhersagen und tatsächlichen Werte korrekt abgerufen und geplottet werden.
+# make sure predictions and actual values are retrieved and plotted correctly
 fig, axes = plt.subplots(nrows=1, ncols=3, figsize=(18, 5), sharex=False, sharey=True)
 fig.suptitle('Comparison of Actual Targets and Predictions for Selected Stations')
 
@@ -480,11 +480,11 @@ for i, station_index in enumerate(selected_stations):
     historical_targets = [target[station_index] for target in dataset.targets[-(num_test_steps + num_historical_data):-num_test_steps]]
     test_targets = [target[station_index] for target in dataset.targets[-num_test_steps:]]
 
-    # Anzahl der Trainingsteps vor historischen
+    # number of training steps before the historical window
     num_train_steps = num_train_timesteps - num_test_steps - num_historical_data
     train_steps = list(range(num_train_steps))
 
-    # Sicherstellen, dass die Vorhersagen korrekt abgerufen werden
+    # make sure the predictions are retrieved correctly
     arima_preds = arima_test_predictions.get(f"Station_{station_index + 1}", [None] * num_test_steps)
     gconvgru_preds = test_predictions_gru[station_index][-num_test_steps:]
     gconvlstm_preds = test_predictions_lstm[station_index][-num_test_steps:]
@@ -541,10 +541,10 @@ plt.show()
 
 print("\n================== Metrics Summary for selected Regions ==================\n")
 
-# Ausgewählte Stationen (in Null-basierter Indexierung)
-selected_stations = [0, 2, 14]  # Indices für Stationen 1, 9 und 15
+# selected stations (zero-based indices)
+selected_stations = [0, 2, 14]   # indices for stations 1, 3 and 15
 
-# Funktion zum Formatieren des Stationsnamens
+# format the station name for printing
 def format_station_name(index):
     return f"Station_{index + 1}"
 

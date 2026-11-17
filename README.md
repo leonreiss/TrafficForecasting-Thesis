@@ -22,6 +22,7 @@ Future work could explore further regularisation techniques and transfer learnin
 | File | Description |
 |---|---|
 | `Code_TrafficForecastingGCRN.py` | Python code for all models (GConvGRU, GConvLSTM, ARIMA) and the evaluation |
+| `Written_Thesis_TrafficForecasting_Leon_Reiß.pdf` | Full thesis submitted at Maastricht University |
 
 **Note:** The script was exported from a Google Colab notebook (Python 3.10, PyTorch 2.2.1, PyTorch Geometric 2.5.2, PyTorch Geometric Temporal 0.54). Run it cell by cell in Colab; lines starting with `!` are shell commands.
 

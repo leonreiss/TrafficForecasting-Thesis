@@ -22,7 +22,6 @@ Future work could explore further regularisation techniques and transfer learnin
 | File | Description |
 |---|---|
 | `Code_TrafficForecastingGCRN.py` | Python code for all models (GConvGRU, GConvLSTM, ARIMA) and the evaluation |
-| `Written_Thesis_TrafficForecasting_Leon_Reiß.pdf` | Full thesis submitted at Maastricht University (no publication restrictions) |
 
 ## References
 

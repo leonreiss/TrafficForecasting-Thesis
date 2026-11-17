@@ -23,6 +23,8 @@ Future work could explore further regularisation techniques and transfer learnin
 |---|---|
 | `Code_TrafficForecastingGCRN.py` | Python code for all models (GConvGRU, GConvLSTM, ARIMA) and the evaluation |
 
+**Note:** The script was exported from a Google Colab notebook (Python 3.10, PyTorch 2.2.1, PyTorch Geometric 2.5.2, PyTorch Geometric Temporal 0.54). Run it cell by cell in Colab; lines starting with `!` are shell commands.
+
 ## References
 
 - **Method:** Seo, Y., Defferrard, M., Vandergheynst, P., & Bresson, X. (2016). *Structured Sequence Modeling with Graph Convolutional Recurrent Networks.* arXiv. [doi.org/10.48550/arXiv.1612.07659](https://doi.org/10.48550/arXiv.1612.07659)
